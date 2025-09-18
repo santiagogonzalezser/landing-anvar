@@ -165,7 +165,7 @@ export default function Home() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           />
         </div>
-        <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 lg:space-x-8">
+        <div className="flex items-center space-x-0.5 sm:space-x-2 md:space-x-4 lg:space-x-8">
           <div className="block">
             <a href="https://www.equanime.co/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-100" style={{ opacity: 0.7 }}>
               <Image
