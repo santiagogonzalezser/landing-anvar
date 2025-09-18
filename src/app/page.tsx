@@ -126,30 +126,32 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full" style={{ backgroundColor: '#27312d', color: '#8e8066', paddingTop: '72px' }}>
       {/* Background animated elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full blur-3xl transition-all duration-1000"
-          style={{
-            left: typeof window !== 'undefined' ? Math.max(0, Math.min(mousePosition.x / 15, window.innerWidth - 384)) : mousePosition.x / 15,
-            top: mousePosition.y / 15 + scrollY / 5,
-            backgroundColor: 'rgba(142, 128, 102, 0.1)',
-          }}
-        />
-        <div
-          className="absolute top-1/4 right-1/4 w-32 h-32 sm:w-48 sm:h-48 md:w-80 md:h-80 rounded-full blur-3xl animate-pulse"
-          style={{
-            transform: `translateY(${scrollY / 8}px)`,
-            backgroundColor: 'rgba(142, 128, 102, 0.05)'
-          }}
-        />
-        <div
-          className="absolute bottom-1/4 left-1/3 w-28 h-28 sm:w-44 sm:h-44 md:w-72 md:h-72 rounded-full blur-3xl animate-pulse delay-1000"
-          style={{
-            transform: `translateY(${-scrollY / 6}px)`,
-            backgroundColor: 'rgba(142, 128, 102, 0.08)'
-          }}
-        />
-      </div>
+      {mounted && (
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div
+            className="absolute w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full blur-3xl transition-all duration-1000"
+            style={{
+              left: Math.max(0, Math.min(mousePosition.x / 15, window.innerWidth - 384)),
+              top: mousePosition.y / 15 + scrollY / 5,
+              backgroundColor: 'rgba(142, 128, 102, 0.1)',
+            }}
+          />
+          <div
+            className="absolute top-1/4 right-1/4 w-32 h-32 sm:w-48 sm:h-48 md:w-80 md:h-80 rounded-full blur-3xl animate-pulse"
+            style={{
+              transform: `translateY(${scrollY / 8}px)`,
+              backgroundColor: 'rgba(142, 128, 102, 0.05)'
+            }}
+          />
+          <div
+            className="absolute bottom-1/4 left-1/3 w-28 h-28 sm:w-44 sm:h-44 md:w-72 md:h-72 rounded-full blur-3xl animate-pulse delay-1000"
+            style={{
+              transform: `translateY(${-scrollY / 6}px)`,
+              backgroundColor: 'rgba(142, 128, 102, 0.08)'
+            }}
+          />
+        </div>
+      )}
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 sm:p-6 md:p-8 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(39, 49, 45, 0.95)', borderBottomColor: 'rgba(142, 128, 102, 0.2)' }}>
@@ -169,9 +171,9 @@ export default function Home() {
               <Image
                 src="/equanime-logo.png"
                 alt="Equánime"
-                width={80}
-                height={24}
-                className="h-4 sm:h-5 md:h-6 object-contain"
+                width={120}
+                height={36}
+                className="h-6 sm:h-7 md:h-8 lg:h-9 object-contain"
               />
             </a>
           </div>
