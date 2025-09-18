@@ -11,6 +11,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "ÁNVAR 93 - El Nuevo Ícono de Bogotá | Apartamentos Exclusivos Parque de la 93",
   description: "Descubre el exclusivo desarrollo residencial ÁNVAR 93 en el corazón del Parque de la 93, Chicó. 152 apartamentos de lujo, Club House premium y zona comercial. Pre-venta privada disponible.",
+  icons: {
+    icon: '/q-equanime.png',
+    shortcut: '/q-equanime.png',
+    apple: '/q-equanime.png',
+  },
 };
 
 export default function RootLayout({

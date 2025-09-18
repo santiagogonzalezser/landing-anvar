@@ -164,9 +164,15 @@ export default function Home() {
           />
         </div>
         <div className="flex items-center space-x-2 sm:space-x-4 md:space-x-8">
-          <div className="text-xs sm:text-sm tracking-wide hidden sm:block">
-            <a href="https://www.equanime.co/" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: '#8e8066', opacity: 0.7 }} onMouseEnter={(e) => (e.target as HTMLElement).style.opacity = '1'} onMouseLeave={(e) => (e.target as HTMLElement).style.opacity = '0.7'}>
-              EQUÁNIME
+          <div className="hidden sm:block">
+            <a href="https://www.equanime.co/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-100" style={{ opacity: 0.7 }}>
+              <Image
+                src="/equanime-logo.png"
+                alt="Equánime"
+                width={80}
+                height={24}
+                className="h-4 sm:h-5 md:h-6 object-contain"
+              />
             </a>
           </div>
           <a href="#contacto" className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 text-xs sm:text-sm rounded-full transition-all shadow-lg" style={{ backgroundColor: '#8e8066', color: '#27312d' }} onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#a69373'} onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#8e8066'}>
