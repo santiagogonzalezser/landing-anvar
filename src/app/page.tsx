@@ -171,9 +171,9 @@ export default function Home() {
               <Image
                 src="/equanime-logo.png"
                 alt="Equánime"
-                width={120}
-                height={36}
-                className="h-6 sm:h-7 md:h-8 lg:h-9 object-contain"
+                width={150}
+                height={45}
+                className="h-8 sm:h-9 md:h-10 lg:h-11 object-contain"
               />
             </a>
           </div>
