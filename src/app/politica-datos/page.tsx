@@ -30,7 +30,7 @@ export default function PoliticaDatos() {
             <h2 className="text-2xl font-bold mb-4" style={{ color: '#8e8066' }}>1. MARCO LEGAL</h2>
             <p className="leading-relaxed mb-4">
               La presente Política de Tratamiento y Protección de Datos Personales se establece en cumplimiento de la
-              Ley 1581 de 2012 "Por la cual se dictan disposiciones generales para la protección de datos personales"
+              Ley 1581 de 2012 &ldquo;Por la cual se dictan disposiciones generales para la protección de datos personales&rdquo;
               y el Decreto 1377 de 2013, que desarrollan el derecho constitucional que tienen todas las personas a
               conocer, actualizar y rectificar las informaciones que se hayan recogido sobre ellas en bases de datos
               o archivos de entidades públicas o privadas.

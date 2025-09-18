@@ -15,7 +15,6 @@ export default function Home() {
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const [showValidationMessage, setShowValidationMessage] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState('+57');
-  const [countrySearch, setCountrySearch] = useState('');
   const [showCountryDropdown, setShowCountryDropdown] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [closingDropdown, setClosingDropdown] = useState<string | null>(null);
@@ -38,7 +37,6 @@ export default function Home() {
       const target = e.target as HTMLElement;
       if (!target.closest('.country-selector')) {
         setShowCountryDropdown(false);
-        setCountrySearch('');
       }
     };
 
@@ -96,7 +94,7 @@ export default function Home() {
   ];
 
 
-  const handleCountrySelect = (country: { code: string; name: string; flag: string }) => {
+  const handleCountrySelect = (country: { code: string; name: string }) => {
     setSelectedCountry(country.code);
     setShowCountryDropdown(false);
   };
@@ -167,11 +165,11 @@ export default function Home() {
         </div>
         <div className="flex items-center space-x-8">
           <div className="text-sm tracking-wide">
-            <a href="https://www.equanime.co/" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: '#8e8066', opacity: 0.7 }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.7'}>
+            <a href="https://www.equanime.co/" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: '#8e8066', opacity: 0.7 }} onMouseEnter={(e) => (e.target as HTMLElement).style.opacity = '1'} onMouseLeave={(e) => (e.target as HTMLElement).style.opacity = '0.7'}>
               EQUÁNIME
             </a>
           </div>
-          <a href="#contacto" className="px-6 py-2 rounded-full transition-all shadow-lg" style={{ backgroundColor: '#8e8066', color: '#27312d' }} onMouseEnter={(e) => e.target.style.backgroundColor = '#a69373'} onMouseLeave={(e) => e.target.style.backgroundColor = '#8e8066'}>
+          <a href="#contacto" className="px-6 py-2 rounded-full transition-all shadow-lg" style={{ backgroundColor: '#8e8066', color: '#27312d' }} onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#a69373'} onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#8e8066'}>
             Pre-venta
           </a>
         </div>
@@ -263,11 +261,8 @@ export default function Home() {
                 <button
                   onClick={() => toggleDropdown('ubicacion')}
                   className="w-full text-left p-6 flex justify-between items-center rounded-2xl transition-all"
-                  style={{
-                    ':hover': { backgroundColor: 'rgba(142, 128, 102, 0.2)' }
-                  }}
-                  onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(142, 128, 102, 0.2)'}
-                  onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = 'rgba(142, 128, 102, 0.2)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = 'transparent'}
                 >
                   <h3 className="text-2xl font-bold" style={{ color: '#8e8066' }}>Ubicación Privilegiada</h3>
                   <span className="text-2xl" style={{ color: '#8e8066' }}>
@@ -303,8 +298,8 @@ export default function Home() {
                 <button
                   onClick={() => toggleDropdown('diseno')}
                   className="w-full text-left p-6 flex justify-between items-center rounded-2xl transition-all"
-                  onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(166, 147, 115, 0.2)'}
-                  onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = 'rgba(166, 147, 115, 0.2)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = 'transparent'}
                 >
                   <h3 className="text-2xl font-bold" style={{ color: '#a69373' }}>Diseño Arquitectónico</h3>
                   <span className="text-2xl" style={{ color: '#a69373' }}>
@@ -331,8 +326,8 @@ export default function Home() {
                 <button
                   onClick={() => toggleDropdown('inversion')}
                   className="w-full text-left p-6 flex justify-between items-center rounded-2xl transition-all"
-                  onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(142, 128, 102, 0.2)'}
-                  onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = 'rgba(142, 128, 102, 0.2)'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = 'transparent'}
                 >
                   <h3 className="text-2xl font-bold" style={{ color: '#8e8066' }}>Oportunidad de Inversión</h3>
                   <span className="text-2xl" style={{ color: '#8e8066' }}>
@@ -564,8 +559,8 @@ export default function Home() {
                     target="_blank"
                     className="underline transition-colors"
                     style={{ color: '#27312d' }}
-                    onMouseEnter={(e) => e.target.style.opacity = '1'}
-                    onMouseLeave={(e) => e.target.style.opacity = '0.8'}
+                    onMouseEnter={(e) => (e.target as HTMLElement).style.opacity = '1'}
+                    onMouseLeave={(e) => (e.target as HTMLElement).style.opacity = '0.8'}
                   >
                     Política de Tratamiento de Datos Personales
                   </a>
@@ -588,11 +583,11 @@ export default function Home() {
                 className="w-full px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg hover:scale-105 cursor-pointer hover:cursor-pointer"
                 style={{ backgroundColor: '#27312d', color: '#8e8066' }}
                 onMouseEnter={(e) => {
-                  e.target.style.cursor = 'pointer';
-                  e.target.style.backgroundColor = '#3a4540';
+                  (e.target as HTMLElement).style.cursor = 'pointer';
+                  (e.target as HTMLElement).style.backgroundColor = '#3a4540';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = '#27312d';
+                  (e.target as HTMLElement).style.backgroundColor = '#27312d';
                 }}
               >
                 Solicitar Información Exclusiva
@@ -615,7 +610,7 @@ export default function Home() {
           <div className="text-center" style={{ color: '#8e8066', opacity: 0.7 }}>
             <p>&copy; 2024 ÁNVAR 93. Todos los derechos reservados.</p>
             <p className="mt-2">
-              <a href="/politica-datos" className="transition-colors" style={{ color: '#8e8066' }} onMouseEnter={(e) => e.target.style.color = '#a69373'} onMouseLeave={(e) => e.target.style.color = '#8e8066'}>
+              <a href="/politica-datos" className="transition-colors" style={{ color: '#8e8066' }} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#a69373'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#8e8066'}>
                 Política de Tratamiento de Datos
               </a>
             </p>
@@ -645,10 +640,10 @@ export default function Home() {
                 className="px-8 py-3 rounded-xl font-semibold transition-all hover:scale-105 shadow-lg"
                 style={{ backgroundColor: '#27312d', color: '#8e8066' }}
                 onMouseEnter={(e) => {
-                  e.target.style.backgroundColor = '#3a4540';
+                  (e.target as HTMLElement).style.backgroundColor = '#3a4540';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = '#27312d';
+                  (e.target as HTMLElement).style.backgroundColor = '#27312d';
                 }}
               >
                 Continuar

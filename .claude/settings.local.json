@@ -9,7 +9,10 @@
       "Read(//c/Users/santi/OneDrive/Imágenes/ÁNVAR/**)",
       "Bash(pkill:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(npx next:*)",
+      "Bash(powershell:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
