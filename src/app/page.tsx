@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Script from 'next/script';
-import { HiLocationMarker, HiMail, HiPhone } from 'react-icons/hi';
 import { RiBuilding2Fill, RiWaterFlashFill, RiStoreFill } from 'react-icons/ri';
 import { GiWaves, GiWeightLiftingUp } from 'react-icons/gi';
 import { IoWaterOutline } from 'react-icons/io5';
 import { IoCheckmarkCircle } from 'react-icons/io5';
 import { FaCircle } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -95,10 +95,6 @@ export default function Home() {
     { code: '+593', name: 'ECU' },
   ];
 
-  const filteredCountries = countries.filter(country =>
-    country.name.includes(countrySearch.toUpperCase()) ||
-    country.code.includes(countrySearch)
-  );
 
   const handleCountrySelect = (country: { code: string; name: string; flag: string }) => {
     setSelectedCountry(country.code);
@@ -160,9 +156,11 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-6 md:p-8 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(39, 49, 45, 0.95)', borderBottomColor: 'rgba(142, 128, 102, 0.2)' }}>
         <div className="flex items-center">
-          <img
+          <Image
             src="/logo-anvar.png"
             alt="ÁNVAR 93 Logo"
+            width={120}
+            height={40}
             className="h-10 object-contain cursor-pointer transition-transform hover:scale-105"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           />
@@ -184,9 +182,11 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           {/* Logo */}
           <div className="text-center mb-8">
-            <img
+            <Image
               src="/logo-anvar.png"
               alt="ÁNVAR 93 Logo"
+              width={200}
+              height={128}
               className="mx-auto h-24 md:h-32 object-contain"
             />
           </div>
@@ -286,9 +286,11 @@ export default function Home() {
                       Rodeado de la mejor gastronomía, centros comerciales de lujo y conectividad excepcional.
                     </p>
                     <div className="rounded-2xl overflow-hidden shadow-xl">
-                      <img
+                      <Image
                         src="/mapa-anvar.jpg"
                         alt="Mapa ÁNVAR 93 - Ubicación y distribución del proyecto"
+                        width={800}
+                        height={600}
                         className="w-full h-auto object-cover"
                       />
                     </div>
