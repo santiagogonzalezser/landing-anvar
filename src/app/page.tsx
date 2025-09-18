@@ -165,15 +165,15 @@ export default function Home() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           />
         </div>
-        <div className="flex items-center space-x-2 sm:space-x-4 md:space-x-8">
-          <div className="hidden sm:block">
+        <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 lg:space-x-8">
+          <div className="block">
             <a href="https://www.equanime.co/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-100" style={{ opacity: 0.7 }}>
               <Image
                 src="/equanime-logo.png"
                 alt="Equánime"
                 width={150}
                 height={45}
-                className="h-8 sm:h-9 md:h-10 lg:h-11 object-contain"
+                className="h-6 sm:h-8 md:h-9 lg:h-10 xl:h-11 object-contain"
               />
             </a>
           </div>
