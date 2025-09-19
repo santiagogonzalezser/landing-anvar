@@ -154,8 +154,8 @@ export default function Home() {
       )}
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 py-3 sm:py-4 md:py-4 lg:py-5 xl:py-5 2xl:py-6 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(39, 49, 45, 0.95)', borderBottomColor: 'rgba(142, 128, 102, 0.2)' }}>
-        <div className="flex items-center -ml-1 sm:ml-0">
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center px-4 sm:px-4 md:px-6 lg:px-8 xl:px-10 py-3 sm:py-4 md:py-4 lg:py-5 xl:py-5 2xl:py-6 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(39, 49, 45, 0.95)', borderBottomColor: 'rgba(142, 128, 102, 0.2)' }}>
+        <div className="flex items-center">
           <a href="https://www.equanime.co/" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-105" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <Image
               src="/equanime-logo-new.png"
@@ -166,6 +166,7 @@ export default function Home() {
             />
           </a>
         </div>
+        <div className="flex-1"></div>
         <div className="flex items-center">
           <a href="#contacto" className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 xl:px-7 xl:py-3.5 2xl:px-8 2xl:py-4 text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl rounded-full transition-all shadow-lg hover:scale-105" style={{ backgroundColor: '#8e8066', color: '#27312d' }} onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#a69373'} onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#8e8066'}>
             Pre-venta
