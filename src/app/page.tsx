@@ -124,7 +124,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden max-w-full" style={{ backgroundColor: '#27312d', color: '#8e8066', paddingTop: '72px' }}>
+    <div className="min-h-screen overflow-x-hidden max-w-full" style={{ backgroundColor: '#27312d', color: '#8e8066', paddingTop: '90px' }}>
       {/* Background animated elements */}
       {mounted && (
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -154,46 +154,36 @@ export default function Home() {
       )}
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 sm:p-6 md:p-8 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(39, 49, 45, 0.95)', borderBottomColor: 'rgba(142, 128, 102, 0.2)' }}>
+      <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-3 sm:px-4 md:px-6 lg:px-8 xl:px-10 py-3 sm:py-4 md:py-4 lg:py-5 xl:py-5 2xl:py-6 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(39, 49, 45, 0.95)', borderBottomColor: 'rgba(142, 128, 102, 0.2)' }}>
         <div className="flex items-center">
-          <Image
-            src="/logo-anvar.png"
-            alt="ÁNVAR 93 Logo"
-            width={120}
-            height={40}
-            className="h-8 sm:h-10 object-contain cursor-pointer transition-transform hover:scale-105"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          />
+          <a href="https://www.equanime.co/" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-105" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <Image
+              src="/equanime-logo-new.png"
+              alt="Equánime"
+              width={180}
+              height={54}
+              className="h-10 sm:h-11 md:h-12 lg:h-14 xl:h-16 2xl:h-18 object-contain cursor-pointer"
+            />
+          </a>
         </div>
-        <div className="flex items-center space-x-0.5 sm:space-x-2 md:space-x-4 lg:space-x-8">
-          <div className="block">
-            <a href="https://www.equanime.co/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-100" style={{ opacity: 0.7 }}>
-              <Image
-                src="/equanime-logo.png"
-                alt="Equánime"
-                width={150}
-                height={45}
-                className="h-6 sm:h-8 md:h-9 lg:h-10 xl:h-11 object-contain"
-              />
-            </a>
-          </div>
-          <a href="#contacto" className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 text-xs sm:text-sm rounded-full transition-all shadow-lg" style={{ backgroundColor: '#8e8066', color: '#27312d' }} onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#a69373'} onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#8e8066'}>
+        <div className="flex items-center">
+          <a href="#contacto" className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 xl:px-7 xl:py-3.5 2xl:px-8 2xl:py-4 text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl rounded-full transition-all shadow-lg hover:scale-105" style={{ backgroundColor: '#8e8066', color: '#27312d' }} onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#a69373'} onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#8e8066'}>
             Pre-venta
           </a>
         </div>
       </nav>
 
       {/* Logo and 360° Virtual Tour */}
-      <section className="relative z-10 py-8 sm:py-12 px-4 sm:px-6">
+      <section className="relative z-10 py-6 sm:py-8 md:py-10 lg:py-12 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           {/* Logo */}
-          <div className="text-center mb-6 sm:mb-8">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10">
             <Image
               src="/logo-anvar.png"
               alt="ÁNVAR 93 Logo"
-              width={200}
-              height={128}
-              className="mx-auto h-16 sm:h-20 md:h-24 lg:h-32 object-contain"
+              width={240}
+              height={154}
+              className="mx-auto h-20 sm:h-24 md:h-28 lg:h-36 xl:h-40 object-contain"
             />
           </div>
 
@@ -442,9 +432,9 @@ export default function Home() {
               <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl mb-4 sm:mb-6 flex items-center justify-center" style={{ backgroundColor: '#8e8066' }}>
                 <IoWaterOutline className="text-xl sm:text-2xl md:text-3xl" style={{ color: '#27312d' }} />
               </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4" style={{ color: '#8e8066' }}>Circuito Hídrico</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4" style={{ color: '#8e8066' }}>Zona de Recuperación</h3>
               <p className="leading-relaxed text-sm sm:text-base" style={{ color: '#8e8066', opacity: 0.8 }}>
-                Un circuito hídrico que contiene masajes, sauna y cold plunge.
+                Zona privada que contiene un espacio para masajes, sauna y cold plunge.
               </p>
             </div>
           </div>
