@@ -553,7 +553,7 @@ export default function Home() {
                 <label htmlFor="data-policy-agreement" className="text-xs sm:text-sm leading-relaxed" style={{ color: '#27312d', opacity: 0.8 }}>
                   <span className="text-red-400">*</span> Acepto la{' '}
                   <a
-                    href="/politica-datos"
+                    href="https://politica-datos.vercel.app/"
                     target="_blank"
                     className="underline transition-colors"
                     style={{ color: '#27312d' }}
@@ -608,7 +608,7 @@ export default function Home() {
           <div className="text-center" style={{ color: '#8e8066', opacity: 0.7 }}>
             <p className="text-sm sm:text-base">&copy; 2024 ÁNVAR 93. Todos los derechos reservados.</p>
             <p className="mt-2">
-              <a href="/politica-datos" className="transition-colors text-sm sm:text-base" style={{ color: '#8e8066' }} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#a69373'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#8e8066'}>
+              <a href="https://politica-datos.vercel.app/" className="transition-colors text-sm sm:text-base" style={{ color: '#8e8066' }} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#a69373'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#8e8066'}>
                 Política de Tratamiento de Datos
               </a>
             </p>
