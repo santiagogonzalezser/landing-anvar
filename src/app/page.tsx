@@ -156,6 +156,12 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center px-4 sm:px-4 md:px-6 lg:px-8 xl:px-10 py-3 sm:py-4 md:py-4 lg:py-5 xl:py-5 2xl:py-6 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(39, 49, 45, 0.95)', borderBottomColor: 'rgba(142, 128, 102, 0.2)' }}>
         <div className="flex items-center">
+          <a href="#contacto" className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 xl:px-7 xl:py-3.5 2xl:px-8 2xl:py-4 text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl rounded-full transition-all shadow-lg hover:scale-105" style={{ backgroundColor: '#8e8066', color: '#27312d' }} onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#a69373'} onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#8e8066'}>
+            Lanzamiento
+          </a>
+        </div>
+        <div className="flex-1"></div>
+        <div className="flex items-center">
           <a href="https://www.equanime.co/" target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-105" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <Image
               src="/equanime-logo-new.png"
@@ -164,12 +170,6 @@ export default function Home() {
               height={54}
               className="h-8 sm:h-11 md:h-12 lg:h-14 xl:h-16 2xl:h-18 object-contain cursor-pointer"
             />
-          </a>
-        </div>
-        <div className="flex-1"></div>
-        <div className="flex items-center">
-          <a href="#contacto" className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 xl:px-7 xl:py-3.5 2xl:px-8 2xl:py-4 text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl rounded-full transition-all shadow-lg hover:scale-105" style={{ backgroundColor: '#8e8066', color: '#27312d' }} onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#a69373'} onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#8e8066'}>
-            Pre-venta
           </a>
         </div>
       </nav>
@@ -186,6 +186,9 @@ export default function Home() {
               height={154}
               className="mx-auto h-20 sm:h-24 md:h-28 lg:h-36 xl:h-40 object-contain"
             />
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-4 sm:mt-6 px-2" style={{ color: '#a69373' }}>
+              El nuevo ícono de Bogotá que marcará un antes y un después en el Parque de la 93
+            </h2>
           </div>
 
           {/* 360° Virtual Tour */}
@@ -205,26 +208,25 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] px-4 sm:px-6 md:px-12 lg:px-16 text-center">
 
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 leading-tight px-2" style={{ color: '#a69373' }}>
-          El Nuevo Ícono de Bogotá
-        </h1>
-
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-12 max-w-4xl leading-relaxed px-4" style={{ color: '#8e8066', opacity: 0.9 }}>
-          Descubre el exclusivo desarrollo residencial en el corazón del Parque de la 93.
-          Donde el lujo se encuentra con la inversión inteligente en la zona más privilegiada de Chicó.
+          Una inversión única en el corazón de Chicó.
         </p>
 
         <div className="flex justify-center mb-12 sm:mb-16 px-4">
           <a href="#contacto" className="px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:scale-105 transition-all shadow-2xl" style={{ backgroundColor: '#8e8066', color: '#27312d' }}>
-            Acceder a Pre-venta Privada
+            Acceder a Lanzamiento Privado
           </a>
         </div>
 
         {/* Key Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-6xl w-full px-4 mb-12 sm:mb-16">
           <div className="backdrop-blur-sm border rounded-2xl p-6 hover:scale-105 transition-all shadow-lg" style={{ backgroundColor: 'rgba(142, 128, 102, 0.1)', borderColor: 'rgba(142, 128, 102, 0.3)' }}>
+            <p className="font-medium mb-2" style={{ color: '#8e8066', opacity: 0.8 }}>Apartamentos desde</p>
+            <div className="text-2xl sm:text-3xl font-bold" style={{ color: '#8e8066' }}>25.49m² a 56.55m²</div>
+          </div>
+          <div className="backdrop-blur-sm border rounded-2xl p-6 hover:scale-105 transition-all shadow-lg" style={{ backgroundColor: 'rgba(142, 128, 102, 0.1)', borderColor: 'rgba(142, 128, 102, 0.3)' }}>
             <div className="text-3xl font-bold mb-2" style={{ color: '#8e8066' }}>152</div>
-            <p className="font-medium" style={{ color: '#8e8066', opacity: 0.8 }}>Apartamentos Exclusivos</p>
+            <p className="font-medium" style={{ color: '#8e8066', opacity: 0.8 }}>Apartamentos</p>
           </div>
           <div className="backdrop-blur-sm border rounded-2xl p-6 hover:scale-105 transition-all shadow-lg" style={{ backgroundColor: 'rgba(142, 128, 102, 0.1)', borderColor: 'rgba(142, 128, 102, 0.3)' }}>
             <div className="text-3xl font-bold mb-2" style={{ color: '#8e8066' }}>+1,250m²</div>
@@ -233,10 +235,6 @@ export default function Home() {
           <div className="backdrop-blur-sm border rounded-2xl p-6 hover:scale-105 transition-all shadow-lg" style={{ backgroundColor: 'rgba(142, 128, 102, 0.1)', borderColor: 'rgba(142, 128, 102, 0.3)' }}>
             <div className="text-3xl font-bold mb-2" style={{ color: '#8e8066' }}>+720m²</div>
             <p className="font-medium" style={{ color: '#8e8066', opacity: 0.8 }}>Zona Comercial</p>
-          </div>
-          <div className="backdrop-blur-sm border rounded-2xl p-6 hover:scale-105 transition-all shadow-lg" style={{ backgroundColor: 'rgba(142, 128, 102, 0.1)', borderColor: 'rgba(142, 128, 102, 0.3)' }}>
-            <div className="text-3xl font-bold mb-2" style={{ color: '#8e8066' }}>25.49-56.55m²</div>
-            <p className="font-medium" style={{ color: '#8e8066', opacity: 0.8 }}>Apartamentos Desde</p>
           </div>
         </div>
 
@@ -278,8 +276,7 @@ export default function Home() {
                     }}
                   >
                     <p className="leading-relaxed text-sm sm:text-base md:text-lg mb-4 sm:mb-6 mt-2 sm:mt-4" style={{ color: '#8e8066', opacity: 0.8 }}>
-                      Ubicado en el exclusivo Parque de la 93 en Chicó, la zona más valorizada de Bogotá.
-                      Rodeado de la mejor gastronomía, centros comerciales de lujo y conectividad excepcional.
+                      Ubicado en el Parque de la 93 en Chicó, la zona más valorizada de Bogotá. Donde convergen arte, gastronomía y la vida social más exclusiva de la ciudad.
                     </p>
                     <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-xl">
                       <Image
@@ -446,7 +443,7 @@ export default function Home() {
       <section id="contacto" className="relative z-10 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-12 lg:px-16" style={{ backgroundColor: '#8e8066' }}>
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 px-2" style={{ color: '#27312d' }}>
-            Accede a la Pre-venta Privada
+            Accede al Lanzamiento Privado
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-8 sm:mb-10 md:mb-12 max-w-2xl mx-auto px-4" style={{ color: '#27312d', opacity: 0.8 }}>
             Sé parte de los primeros en conocer este exclusivo proyecto.
