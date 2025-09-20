@@ -410,7 +410,7 @@ export default function Home() {
               <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl mb-4 sm:mb-6 flex items-center justify-center" style={{ backgroundColor: '#8e8066' }}>
                 <GiWaves className="text-xl sm:text-2xl md:text-3xl" style={{ color: '#27312d' }} />
               </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4" style={{ color: '#8e8066' }}>Piscina Infinity</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4" style={{ color: '#8e8066' }}>Piscina con Borde Infinito</h3>
               <p className="leading-relaxed text-sm sm:text-base" style={{ color: '#8e8066', opacity: 0.8 }}>
                 Espectacular piscina infinita con vista directamente al Parque de la 93.
               </p>
