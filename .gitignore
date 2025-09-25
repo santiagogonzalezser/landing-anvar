@@ -41,6 +41,6 @@ yarn-error.log*
 next-env.d.ts
 
 # ai model instructions
+CLAUDE.MD
 /.claude
-/.instructions
-/.design
+/.resources
