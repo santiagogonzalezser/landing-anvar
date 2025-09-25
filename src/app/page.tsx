@@ -280,7 +280,7 @@ export default function Home() {
                     </p>
                     <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-xl">
                       <Image
-                        src="/mapa-anvar.jpg"
+                        src="/mapa-aria.jpg"
                         alt="Mapa ARIA 93 - Ubicación y distribución del proyecto"
                         width={800}
                         height={600}
