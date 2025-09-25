@@ -180,8 +180,8 @@ export default function Home() {
           {/* Logo */}
           <div className="text-center mb-6 sm:mb-8 md:mb-10">
             <Image
-              src="/logo-anvar.png"
-              alt="ÁNVAR 93 Logo"
+              src="/logo-aria-transparent.png"
+              alt="ARIA 93 Logo"
               width={240}
               height={154}
               className="mx-auto h-20 sm:h-24 md:h-28 lg:h-36 xl:h-40 object-contain"
@@ -281,7 +281,7 @@ export default function Home() {
                     <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-xl">
                       <Image
                         src="/mapa-anvar.jpg"
-                        alt="Mapa ÁNVAR 93 - Ubicación y distribución del proyecto"
+                        alt="Mapa ARIA 93 - Ubicación y distribución del proyecto"
                         width={800}
                         height={600}
                         className="w-full h-auto object-cover"
@@ -606,7 +606,7 @@ export default function Home() {
       <footer className="relative z-10 py-8 sm:py-10 md:py-12 px-4 sm:px-6" style={{ backgroundColor: '#27312d' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center" style={{ color: '#8e8066', opacity: 0.7 }}>
-            <p className="text-sm sm:text-base">&copy; 2024 ÁNVAR 93. Todos los derechos reservados.</p>
+            <p className="text-sm sm:text-base">&copy; 2024 ARIA 93. Todos los derechos reservados.</p>
             <p className="mt-2">
               <a href="https://politica-datos.vercel.app/" className="transition-colors text-sm sm:text-base" style={{ color: '#8e8066' }} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#a69373'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#8e8066'}>
                 Política de Tratamiento de Datos
@@ -631,7 +631,7 @@ export default function Home() {
                 ¡Registro Exitoso!
               </h3>
               <p className="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base" style={{ color: '#27312d', opacity: 0.8 }}>
-                Gracias por tu interés en ÁNVAR 93. Hemos recibido tu información y nos pondremos en contacto contigo muy pronto con detalles exclusivos del proyecto.
+                Gracias por tu interés en ARIA 93. Hemos recibido tu información y nos pondremos en contacto contigo muy pronto con detalles exclusivos del proyecto.
               </p>
               <button
                 onClick={() => setShowSuccessPopup(false)}
