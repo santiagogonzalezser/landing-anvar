@@ -44,42 +44,38 @@ export const ApartmentosPage: React.FC = () => {
       {/* Header */}
       <header
         className={`fixed top-0 right-0 z-50 border-b transition-all duration-300 ease-in-out ${
-          isOpen ? 'left-[280px] shadow-lg lg:shadow-sm' : 'left-0 shadow-sm'
-        }`}
+          isOpen ? 'left-[280px]' : 'left-0'
+        } ${isOpen ? 'shadow-2xl' : 'shadow-sm'} lg:shadow-sm`}
         style={{
           backgroundColor: theme.colors.nav,
           borderColor: 'rgba(142, 128, 102, 0.2)'
         }}
       >
         <div className="px-4 lg:px-6 py-2 sm:py-3">
-          <div className="flex items-center">
-            <div className="flex items-center space-x-4">
-              <Link
-                href="/"
-                className="flex items-center space-x-2 text-base font-medium hover:opacity-70 transition-opacity"
-                style={{ color: theme.colors.text.primary }}
-              >
-                <RiArrowLeftLine size={20} />
-                <span>Volver al inicio</span>
-              </Link>
-            </div>
+          <div className="flex items-center justify-between w-full">
+            <Link
+              href="/"
+              className="flex items-center space-x-2 text-base font-medium hover:opacity-70 transition-opacity flex-shrink-0"
+              style={{ color: theme.colors.text.primary }}
+            >
+              <RiArrowLeftLine size={20} />
+              <span className="hidden sm:inline">Volver al inicio</span>
+            </Link>
 
-            <div className="ml-auto shrink-0">
-              <a
-                href="https://www.equanime.co/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-all hover:scale-105 block"
-              >
-                <Image
-                  src="/equanime-logo-new.png"
-                  alt="Un Proyecto de Equánime"
-                  width={180}
-                  height={54}
-                  className="h-6 sm:h-8 md:h-9 lg:h-10 xl:h-11 2xl:h-12 object-contain cursor-pointer"
-                />
-              </a>
-            </div>
+            <a
+              href="https://www.equanime.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all hover:scale-105 flex-shrink-0"
+            >
+              <Image
+                src="/equanime-logo-new.png"
+                alt="Un Proyecto de Equánime"
+                width={180}
+                height={54}
+                className="h-6 sm:h-8 md:h-9 lg:h-10 xl:h-11 2xl:h-12 object-contain cursor-pointer"
+              />
+            </a>
           </div>
         </div>
       </header>
