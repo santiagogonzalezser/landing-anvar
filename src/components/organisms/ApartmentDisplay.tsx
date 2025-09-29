@@ -4,7 +4,7 @@ import { ApartmentCard } from '@/components/ui/ApartmentCard';
 import { ApartmentStats } from '@/components/ui/ApartmentStats';
 import { CategoryLanding } from './CategoryLanding';
 import { theme } from '@/lib/theme';
-import { RiInformationLine } from 'react-icons/ri';
+import { RiInformationLine, RiCloseLine } from 'react-icons/ri';
 
 interface ApartmentDisplayProps {
   selectedModel: ApartmentModel | null;
@@ -80,10 +80,10 @@ export const ApartmentDisplay: React.FC<ApartmentDisplayProps> = ({
                 className="w-full h-full"
               />
 
-              {/* Mobile Info Button - Icon overlay on top right of photo */}
+              {/* Mobile Info Button - Icon overlay below carousel, centered */}
               <button
                 onClick={() => setShowMobileDetails(true)}
-                className="lg:hidden absolute top-4 right-4 z-10 p-3 rounded-full shadow-lg transition-all hover:scale-105"
+                className="lg:hidden absolute bottom-8 left-1/2 -translate-x-1/2 z-10 p-3 rounded-full shadow-lg transition-all hover:scale-105"
                 style={{ backgroundColor: theme.colors.secondary, color: theme.colors.primary }}
               >
                 <RiInformationLine size={24} />
@@ -109,23 +109,20 @@ export const ApartmentDisplay: React.FC<ApartmentDisplayProps> = ({
       {/* Mobile Details Modal */}
       {showMobileDetails && modelCategory && isMobile && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl shadow-xl max-w-md w-full max-h-[80vh] overflow-y-auto">
-            <div className="p-1">
-              <ApartmentStats
-                model={selectedModel}
-                category={modelCategory}
-                className="w-full"
-              />
-            </div>
-            <div className="p-4 pt-0">
-              <button
-                onClick={() => setShowMobileDetails(false)}
-                className="w-full py-3 px-4 rounded-2xl font-semibold transition-all hover:scale-105"
-                style={{ backgroundColor: theme.colors.primary, color: theme.colors.secondary }}
-              >
-                Cerrar
-              </button>
-            </div>
+          <div className="max-w-md w-full max-h-[80vh] overflow-y-auto relative">
+            <ApartmentStats
+              model={selectedModel}
+              category={modelCategory}
+              className="w-full"
+            />
+            <button
+              onClick={() => setShowMobileDetails(false)}
+              className="absolute top-2 right-2 p-2 rounded-full transition-all hover:scale-105"
+              style={{ backgroundColor: theme.colors.primary, color: theme.colors.secondary }}
+              aria-label="Cerrar"
+            >
+              <RiCloseLine size={24} />
+            </button>
           </div>
         </div>
       )}

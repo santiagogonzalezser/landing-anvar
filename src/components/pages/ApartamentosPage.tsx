@@ -43,8 +43,8 @@ export const ApartmentosPage: React.FC = () => {
     >
       {/* Header */}
       <header
-        className={`fixed top-0 right-0 z-50 shadow-sm border-b transition-all duration-300 ease-in-out ${
-          isOpen ? 'left-[280px]' : 'left-0'
+        className={`fixed top-0 right-0 z-50 border-b transition-all duration-300 ease-in-out ${
+          isOpen ? 'left-[280px] shadow-lg lg:shadow-sm' : 'left-0 shadow-sm'
         }`}
         style={{
           backgroundColor: theme.colors.nav,
@@ -52,7 +52,7 @@ export const ApartmentosPage: React.FC = () => {
         }}
       >
         <div className="px-4 lg:px-6 py-2 sm:py-3">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center">
             <div className="flex items-center space-x-4">
               <Link
                 href="/"
@@ -64,12 +64,12 @@ export const ApartmentosPage: React.FC = () => {
               </Link>
             </div>
 
-            <div className="ml-auto">
+            <div className="ml-auto shrink-0">
               <a
                 href="https://www.equanime.co/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-all hover:scale-105"
+                className="transition-all hover:scale-105 block"
               >
                 <Image
                   src="/equanime-logo-new.png"
