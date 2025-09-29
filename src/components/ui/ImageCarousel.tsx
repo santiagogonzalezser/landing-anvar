@@ -43,7 +43,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
     return null;
   }
 
-  // If only one image, use same layout structure as multi-image but hide controls
+  // If only one image, keep same layout but hide arrows and dots
   if (images.length === 1) {
     return (
       <>
@@ -51,7 +51,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
           {/* Container with same spacing as multi-image layout */}
           <div className="flex items-center h-full min-h-0">
             {/* Left spacer to match arrow space */}
-            <div className="p-3 mr-4 flex-shrink-0 opacity-0">
+            <div className="p-3 mr-4 flex-shrink-0 opacity-0 pointer-events-none">
               <div className="w-6 h-6"></div>
             </div>
 
@@ -73,17 +73,14 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
             </div>
 
             {/* Right spacer to match arrow space */}
-            <div className="p-3 ml-4 flex-shrink-0 opacity-0">
+            <div className="p-3 ml-4 flex-shrink-0 opacity-0 pointer-events-none">
               <div className="w-6 h-6"></div>
             </div>
           </div>
 
-          {/* Dots indicator placeholder - single dot */}
-          <div className="flex justify-center mt-4 space-x-2 flex-shrink-0">
-            <div
-              className="w-3 h-3 rounded-full opacity-100"
-              style={{ backgroundColor: '#8e8066' }}
-            />
+          {/* Invisible spacer to maintain consistent bottom spacing */}
+          <div className="mt-4 flex-shrink-0 opacity-0 pointer-events-none">
+            <div className="h-3"></div>
           </div>
         </div>
 

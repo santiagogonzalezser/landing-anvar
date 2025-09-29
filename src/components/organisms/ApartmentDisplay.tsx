@@ -74,27 +74,20 @@ export const ApartmentDisplay: React.FC<ApartmentDisplayProps> = ({
           {/* Main Content - Responsive Layout */}
           <div className="flex flex-col lg:grid lg:grid-cols-4 gap-4 lg:gap-6 h-full items-start">
             {/* Image Section - Takes 3 columns on LG screens, full width on mobile */}
-            <div className="lg:col-span-3 w-full flex justify-center min-h-0 flex-1">
-              <div className="w-full h-full flex flex-col">
-                <div className="flex-1 flex items-center">
-                  <ApartmentCard
-                    model={selectedModel}
-                    className="w-full h-full"
-                  />
-                </div>
+            <div className="lg:col-span-3 w-full flex justify-center min-h-0 flex-1 relative">
+              <ApartmentCard
+                model={selectedModel}
+                className="w-full h-full"
+              />
 
-                {/* Mobile Info Button - Only visible on mobile */}
-                <div className="mt-4 lg:hidden">
-                  <button
-                    onClick={() => setShowMobileDetails(true)}
-                    className="w-full py-3 px-4 rounded-2xl shadow-lg transition-all hover:scale-105 flex items-center justify-center space-x-2"
-                    style={{ backgroundColor: theme.colors.secondary, color: theme.colors.primary }}
-                  >
-                    <RiInformationLine size={20} />
-                    <span className="font-semibold">Ver Información del Apartamento</span>
-                  </button>
-                </div>
-              </div>
+              {/* Mobile Info Button - Icon overlay on top right of photo */}
+              <button
+                onClick={() => setShowMobileDetails(true)}
+                className="lg:hidden absolute top-4 right-4 z-10 p-3 rounded-full shadow-lg transition-all hover:scale-105"
+                style={{ backgroundColor: theme.colors.secondary, color: theme.colors.primary }}
+              >
+                <RiInformationLine size={24} />
+              </button>
             </div>
 
             {/* Stats Panel - Takes 1 column on LG screens, aligned with image top */}

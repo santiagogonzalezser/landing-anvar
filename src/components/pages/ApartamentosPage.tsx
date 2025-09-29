@@ -64,7 +64,7 @@ export const ApartmentosPage: React.FC = () => {
               </Link>
             </div>
 
-            <div className="flex items-center justify-center flex-1 lg:flex-initial lg:justify-start">
+            <div className="ml-auto">
               <a
                 href="https://www.equanime.co/"
                 target="_blank"
