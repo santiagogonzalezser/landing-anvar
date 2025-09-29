@@ -28,7 +28,7 @@ export const HomePage: React.FC = () => {
       style={{
         backgroundColor: theme.colors.background,
         color: theme.colors.text.primary,
-        paddingTop: '80px',
+        paddingTop: '60px',
         fontFamily: theme.fonts.primary
       }}
     >

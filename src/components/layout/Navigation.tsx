@@ -1,18 +1,19 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { scrollToTop } from '@/lib/utils';
 
 export const Navigation: React.FC = () => {
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 flex items-center px-4 sm:px-4 md:px-6 lg:px-8 xl:px-10 py-3 sm:py-4 md:py-4 lg:py-5 xl:py-5 2xl:py-6 backdrop-blur-sm border-b"
+      className="fixed top-0 left-0 right-0 z-50 flex items-center px-4 sm:px-4 md:px-6 lg:px-8 xl:px-10 py-2 sm:py-3 md:py-3 lg:py-3 xl:py-3 2xl:py-4 backdrop-blur-sm border-b"
       style={{
         backgroundColor: 'rgba(39, 49, 45, 0.95)',
         borderBottomColor: 'rgba(142, 128, 102, 0.2)'
       }}
     >
-      <div className="flex items-center">
+      <div className="flex items-center space-x-4">
         <Button
           href="#contacto"
           className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl"
@@ -20,6 +21,14 @@ export const Navigation: React.FC = () => {
         >
           Lanzamiento
         </Button>
+
+        <Link
+          href="/apartamentos"
+          className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl font-semibold hover:opacity-70 transition-opacity"
+          style={{ color: '#8e8066' }}
+        >
+          Apartamentos
+        </Link>
       </div>
       <div className="flex-1"></div>
       <div className="flex items-center">
@@ -35,7 +44,7 @@ export const Navigation: React.FC = () => {
             alt="Equánime"
             width={180}
             height={54}
-            className="h-8 sm:h-11 md:h-12 lg:h-14 xl:h-16 2xl:h-18 object-contain cursor-pointer"
+            className="h-6 sm:h-8 md:h-9 lg:h-10 xl:h-11 2xl:h-12 object-contain cursor-pointer"
           />
         </a>
       </div>

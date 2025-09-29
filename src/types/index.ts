@@ -37,3 +37,42 @@ export interface DropdownSection {
 }
 
 export type DropdownState = string | null;
+
+export interface ApartmentModel {
+  id: string;
+  name: string;
+  image: string;
+  images?: string[];
+  description?: string;
+  area?: string;
+  bedrooms?: number;
+  bathrooms?: number;
+  metraje?: {
+    areaConstructed?: string;
+    areaPrivate?: string;
+    areaExterior?: string;
+  };
+  apartmentNumbers?: string[];
+  models?: string[];
+}
+
+export interface ApartmentCategoryInfo {
+  description: string;
+  metrageRange?: string;
+  apartmentNumbers: string[];
+  models: string[];
+  location?: string;
+  features?: string[];
+}
+
+export interface ApartmentCategory {
+  id: string;
+  name: string;
+  models: ApartmentModel[];
+  info?: ApartmentCategoryInfo;
+}
+
+export interface SidebarState {
+  isOpen: boolean;
+  expandedCategory: string | null;
+}
