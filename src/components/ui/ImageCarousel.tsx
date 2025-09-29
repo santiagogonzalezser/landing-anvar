@@ -43,24 +43,46 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
     return null;
   }
 
-  // If only one image, don't show carousel controls but still allow lightbox
+  // If only one image, use same layout structure as multi-image but hide controls
   if (images.length === 1) {
     return (
       <>
         <div className={`h-full flex flex-col ${className}`}>
-          <div
-            className="relative cursor-pointer h-full"
-            onClick={openLightbox}
-          >
-            <Image
-              src={images[0]}
-              alt={`Apartamento ${modelName}`}
-              width={1200}
-              height={800}
-              className="w-full h-full object-cover hover:opacity-95 transition-opacity rounded-2xl"
-              quality={95}
-              priority
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+          {/* Container with same spacing as multi-image layout */}
+          <div className="flex items-center h-full min-h-0">
+            {/* Left spacer to match arrow space */}
+            <div className="p-3 mr-4 flex-shrink-0 opacity-0">
+              <div className="w-6 h-6"></div>
+            </div>
+
+            {/* Main image */}
+            <div
+              className="relative flex-1 cursor-pointer h-full"
+              onClick={openLightbox}
+            >
+              <Image
+                src={images[0]}
+                alt={`Apartamento ${modelName}`}
+                width={1200}
+                height={800}
+                className="w-full h-full object-cover hover:opacity-95 transition-opacity rounded-2xl"
+                quality={95}
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+              />
+            </div>
+
+            {/* Right spacer to match arrow space */}
+            <div className="p-3 ml-4 flex-shrink-0 opacity-0">
+              <div className="w-6 h-6"></div>
+            </div>
+          </div>
+
+          {/* Dots indicator placeholder - single dot */}
+          <div className="flex justify-center mt-4 space-x-2 flex-shrink-0">
+            <div
+              className="w-3 h-3 rounded-full opacity-100"
+              style={{ backgroundColor: '#8e8066' }}
             />
           </div>
         </div>

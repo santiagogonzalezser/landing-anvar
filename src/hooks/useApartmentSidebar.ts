@@ -20,8 +20,13 @@ export const useApartmentSidebar = (categories: ApartmentCategory[]) => {
 
   const selectModel = (model: ApartmentModel) => {
     setSelectedModel(model);
-    // Keep sidebar open when apartment is selected
-    setIsOpen(true);
+    // Keep sidebar open on desktop, close on mobile
+    const isMobile = window.innerWidth < 1024;
+    if (isMobile) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
   };
 
   const getSelectedCategoryName = () => {

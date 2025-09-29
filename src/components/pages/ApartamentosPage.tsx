@@ -64,7 +64,7 @@ export const ApartmentosPage: React.FC = () => {
               </Link>
             </div>
 
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center justify-center flex-1 lg:flex-initial lg:justify-start">
               <a
                 href="https://www.equanime.co/"
                 target="_blank"
@@ -83,6 +83,14 @@ export const ApartmentosPage: React.FC = () => {
           </div>
         </div>
       </header>
+
+      {/* Mobile Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
+          onClick={toggleSidebar}
+        />
+      )}
 
       {/* Sidebar */}
       <Sidebar
