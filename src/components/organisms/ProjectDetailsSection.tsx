@@ -2,8 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import { Card } from '@/components/ui/Card';
 import { FeatureItem } from '@/components/ui/FeatureItem';
+import { StatCard } from '@/components/ui/StatCard';
 import { useDropdown } from '@/hooks/useDropdown';
-import { FEATURED_CHARACTERISTICS } from '@/lib/constants';
+import { FEATURED_CHARACTERISTICS, PROJECT_STATS } from '@/lib/constants';
 
 export const ProjectDetailsSection: React.FC = () => {
   const { openDropdown, closingDropdown, toggleDropdown } = useDropdown();
@@ -125,6 +126,15 @@ export const ProjectDetailsSection: React.FC = () => {
                 </div>
               </div>
             </Card>
+          </div>
+        </div>
+
+        {/* Project Stats Cards */}
+        <div className="mt-8 sm:mt-10 md:mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 max-w-5xl mx-auto px-4">
+            {PROJECT_STATS.map((stat, index) => (
+              <StatCard key={index} stat={stat} />
+            ))}
           </div>
         </div>
       </div>

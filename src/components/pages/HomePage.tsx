@@ -45,11 +45,6 @@ export const HomePage: React.FC = () => {
       {/* Hero Section with Logo and 360° Tour */}
       <HeroSection />
 
-      {/* Key Stats */}
-      <section className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 lg:px-16 py-4 sm:py-6">
-        <ProjectStats />
-      </section>
-
       {/* Project Details Section */}
       <ProjectDetailsSection />
 

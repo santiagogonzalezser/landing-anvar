@@ -22,7 +22,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
 
   return (
     <div
-      className={`rounded-2xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300 hover:scale-105 ${className}`}
+      className={`rounded-xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300 hover:scale-105 ${className}`}
       style={{ backgroundColor: theme.colors.secondary }}
       onClick={handleClick}
     >
@@ -31,8 +31,8 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
         <Image
           src={firstModel.image}
           alt={`${category.name} - ${firstModel.name}`}
-          width={600}
-          height={450}
+          width={400}
+          height={300}
           className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
           quality={90}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
@@ -40,9 +40,9 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
       </div>
 
       {/* Footer */}
-      <div className="py-2 px-3">
+      <div className="py-1.5 px-2">
         <h3
-          className="text-lg font-bold text-center"
+          className="text-sm font-bold text-center"
           style={{ color: theme.colors.primary }}
         >
           {category.name}

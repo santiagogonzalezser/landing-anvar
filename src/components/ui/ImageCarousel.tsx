@@ -47,40 +47,32 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
   if (images.length === 1) {
     return (
       <>
-        <div className={`h-full flex flex-col ${className}`}>
-          {/* Container with same spacing as multi-image layout */}
-          <div className="flex items-center h-full min-h-0">
-            {/* Left spacer to match arrow space */}
-            <div className="p-3 mr-4 flex-shrink-0 opacity-0 pointer-events-none">
-              <div className="w-6 h-6"></div>
-            </div>
-
-            {/* Main image */}
-            <div
-              className="relative flex-1 cursor-pointer h-full"
-              onClick={openLightbox}
-            >
-              <Image
-                src={images[0]}
-                alt={`Apartamento ${modelName}`}
-                width={1200}
-                height={800}
-                className="w-full h-full object-cover hover:opacity-95 transition-opacity rounded-2xl"
-                quality={95}
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
-              />
-            </div>
-
-            {/* Right spacer to match arrow space */}
-            <div className="p-3 ml-4 flex-shrink-0 opacity-0 pointer-events-none">
-              <div className="w-6 h-6"></div>
-            </div>
+        <div className={`h-full flex items-center ${className}`}>
+          {/* Left spacer to match arrow space */}
+          <div className="p-3 mr-4 flex-shrink-0 opacity-0 pointer-events-none">
+            <div className="w-6 h-6"></div>
           </div>
 
-          {/* Invisible spacer to maintain consistent bottom spacing */}
-          <div className="mt-4 flex-shrink-0 opacity-0 pointer-events-none">
-            <div className="h-3"></div>
+          {/* Main image */}
+          <div
+            className="relative flex-1 cursor-pointer h-full"
+            onClick={openLightbox}
+          >
+            <Image
+              src={images[0]}
+              alt={`Apartamento ${modelName}`}
+              width={1200}
+              height={800}
+              className="w-full h-full object-cover hover:opacity-95 transition-opacity rounded-2xl"
+              quality={95}
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+            />
+          </div>
+
+          {/* Right spacer to match arrow space */}
+          <div className="p-3 ml-4 flex-shrink-0 opacity-0 pointer-events-none">
+            <div className="w-6 h-6"></div>
           </div>
         </div>
 

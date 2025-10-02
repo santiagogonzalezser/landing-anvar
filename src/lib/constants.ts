@@ -284,3 +284,75 @@ export const APARTMENT_CATEGORIES = [
     ]
   }
 ];
+
+export const AMENIDADES_CATEGORIES = [
+  {
+    id: "locales-comerciales",
+    name: "Locales comerciales",
+    info: {
+      description: "Espacios comerciales de primer nivel diseñados para restaurantes, cafés y otros negocios.",
+      apartmentNumbers: [],
+      models: ["CAFE", "RESTAURANTE"],
+      location: "Primer piso",
+      features: ["Ubicación estratégica", "Alta visibilidad", "Acceso directo desde la calle"]
+    },
+    models: [
+      {
+        id: "CAFE",
+        name: "Café",
+        image: "/ARIA_CAFE_WEB.jpg",
+        description: "Espacio comercial ideal para café",
+      },
+      {
+        id: "RESTAURANTE",
+        name: "Restaurante",
+        image: "/ARIA_RESTAURANTE_WEB.jpg",
+        description: "Espacio comercial ideal para restaurante",
+      }
+    ]
+  },
+  {
+    id: "lobby",
+    name: "Lobby",
+    info: {
+      description: "Lobby de diseño contemporáneo que da la bienvenida a residentes y visitantes con elegancia y confort.",
+      apartmentNumbers: [],
+      models: ["LOBBY"],
+      location: "Primer piso",
+      features: ["Diseño contemporáneo", "Espacios de espera", "Acceso controlado"]
+    },
+    models: [
+      {
+        id: "LOBBY",
+        name: "Lobby",
+        image: "/ARIA_LOBBY-WEB.jpg",
+        description: "Lobby principal del edificio",
+      }
+    ]
+  },
+  {
+    id: "cubierta",
+    name: "Cubierta",
+    info: {
+      description: "Área social en la cubierta del edificio con piscina y sports bar, perfecta para el disfrute y entretenimiento.",
+      apartmentNumbers: [],
+      models: ["SPORTS_BAR", "PISCINA"],
+      location: "Cubierta",
+      features: ["Piscina con vista panorámica", "Sports bar", "Área de entretenimiento"]
+    },
+    models: [
+      {
+        id: "SPORTS_BAR",
+        name: "Sports Bar",
+        image: "/ARIA_SPORTS-BAR_WEB.jpg",
+        description: "Sports bar en la cubierta",
+      },
+      {
+        id: "PISCINA",
+        name: "Piscina",
+        image: "/ARIA_PISCINA_WEB.jpg",
+        description: "Piscina en la cubierta",
+      }
+    ]
+  }
+];

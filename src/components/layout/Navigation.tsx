@@ -21,14 +21,6 @@ export const Navigation: React.FC = () => {
         >
           Lanzamiento
         </Button>
-
-        <Link
-          href="/apartamentos"
-          className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl font-semibold hover:opacity-70 transition-opacity"
-          style={{ color: '#8e8066' }}
-        >
-          Apartamentos
-        </Link>
       </div>
       <div className="flex-1"></div>
       <div className="flex items-center">

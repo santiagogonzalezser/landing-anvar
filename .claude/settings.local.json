@@ -22,7 +22,8 @@
       "Bash(git checkout:*)",
       "Bash(cp:*)",
       "Bash(find:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
