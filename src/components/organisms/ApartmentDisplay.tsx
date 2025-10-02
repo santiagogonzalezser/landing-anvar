@@ -93,7 +93,7 @@ export const ApartmentDisplay: React.FC<ApartmentDisplayProps> = ({
             {showStats && (
               <button
                 onClick={() => setShowMobileDetails(true)}
-                className="lg:hidden absolute top-4 right-4 z-10 p-3 rounded-full shadow-lg transition-all hover:scale-105"
+                className="lg:hidden absolute top-8 right-4 z-10 p-3 rounded-full shadow-lg transition-all hover:scale-105"
                 style={{ backgroundColor: theme.colors.secondary, color: theme.colors.primary }}
               >
                 <RiInformationLine size={24} />

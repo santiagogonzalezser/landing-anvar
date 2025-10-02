@@ -73,7 +73,8 @@ export const ApartmentosPage: React.FC = () => {
                 alt="Un Proyecto de Equánime"
                 width={180}
                 height={54}
-                className="h-6 sm:h-8 md:h-9 lg:h-10 xl:h-11 2xl:h-12 object-contain cursor-pointer"
+                className="h-6 sm:h-8 md:h-9 lg:h-10 xl:h-11 2xl:h-12 w-auto object-contain cursor-pointer"
+                style={{ maxWidth: '180px' }}
               />
             </a>
           </div>

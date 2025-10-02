@@ -55,7 +55,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
           {/* Main image */}
           <div
-            className="relative flex-1 cursor-pointer h-full"
+            className={`relative flex-1 cursor-pointer h-full flex items-center justify-center ${images[0].includes('FACHADA') ? 'bg-[#27312d] rounded-2xl' : 'overflow-hidden rounded-2xl'}`}
             onClick={openLightbox}
           >
             <Image
@@ -63,7 +63,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
               alt={`Apartamento ${modelName}`}
               width={1200}
               height={800}
-              className="w-full h-full object-cover hover:opacity-95 transition-opacity rounded-2xl"
+              className={`${images[0].includes('FACHADA') ? 'max-h-full w-auto rounded-2xl' : 'w-full h-full object-cover'} hover:opacity-95 transition-opacity`}
               quality={95}
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
@@ -104,7 +104,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
           {/* Main image */}
           <div
-            className="relative flex-1 cursor-pointer h-full"
+            className="relative flex-1 cursor-pointer h-full overflow-hidden rounded-2xl"
             onClick={openLightbox}
           >
             <Image
@@ -112,7 +112,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
               alt={`Apartamento ${modelName} - Vista ${currentIndex + 1}`}
               width={1200}
               height={800}
-              className="w-full h-full object-cover hover:opacity-95 transition-opacity rounded-2xl"
+              className="w-full h-full object-cover hover:opacity-95 transition-opacity"
               quality={95}
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"

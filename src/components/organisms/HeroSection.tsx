@@ -29,10 +29,10 @@ export const HeroSection: React.FC = () => {
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start flex-wrap">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start flex-wrap items-center">
               <Button
                 href="/apartamentos"
-                className="text-sm sm:text-base font-semibold"
+                className="text-sm sm:text-base font-semibold w-full sm:w-auto max-w-xs"
                 variant="primary"
               >
                 Apartamentos
@@ -40,10 +40,10 @@ export const HeroSection: React.FC = () => {
 
               <Button
                 href="/amenidades"
-                className="text-sm sm:text-base font-semibold"
+                className="text-sm sm:text-base font-semibold w-full sm:w-auto max-w-xs"
                 variant="primary"
               >
-                Amenidades
+                Club House
               </Button>
             </div>
           </div>

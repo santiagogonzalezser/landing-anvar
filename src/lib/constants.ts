@@ -285,7 +285,26 @@ export const APARTMENT_CATEGORIES = [
   }
 ];
 
-export const AMENIDADES_CATEGORIES = [
+export const CLUB_HOUSE_CATEGORIES = [
+  {
+    id: "fachada",
+    name: "Fachada del edificio",
+    info: {
+      description: "Diseño arquitectónico contemporáneo que define el nuevo ícono de Bogotá en el Parque de la 93.",
+      apartmentNumbers: [],
+      models: ["FACHADA"],
+      location: "Exterior",
+      features: ["Diseño contemporáneo", "Fachada icónica", "Arquitectura premium"]
+    },
+    models: [
+      {
+        id: "FACHADA",
+        name: "Fachada",
+        image: "/ARIA_FACHADA_WEB.jpg",
+        description: "Vista de la fachada del edificio ARIA 93",
+      }
+    ]
+  },
   {
     id: "locales-comerciales",
     name: "Locales comerciales",

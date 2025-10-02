@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Sidebar } from '@/components/ui/Sidebar';
 import { ApartmentDisplay } from '@/components/organisms/ApartmentDisplay';
 import { useApartmentSidebar } from '@/hooks/useApartmentSidebar';
-import { AMENIDADES_CATEGORIES } from '@/lib/constants';
+import { CLUB_HOUSE_CATEGORIES } from '@/lib/constants';
 import { theme } from '@/lib/theme';
 import { RiArrowLeftLine, RiMenuLine } from 'react-icons/ri';
 
@@ -19,13 +19,13 @@ export const AmenidadesPage: React.FC = () => {
     toggleCategory,
     selectModel,
     getSelectedCategoryName,
-  } = useApartmentSidebar(AMENIDADES_CATEGORIES);
+  } = useApartmentSidebar(CLUB_HOUSE_CATEGORIES);
 
   const handleSelectCategory = (categoryId: string, modelId: string) => {
     // First expand the category
     toggleCategory(categoryId);
     // Then find and select the model
-    const category = AMENIDADES_CATEGORIES.find(cat => cat.id === categoryId);
+    const category = CLUB_HOUSE_CATEGORIES.find(cat => cat.id === categoryId);
     const model = category?.models.find(model => model.id === modelId);
     if (model) {
       selectModel(model);
@@ -73,7 +73,8 @@ export const AmenidadesPage: React.FC = () => {
                 alt="Un Proyecto de Equánime"
                 width={180}
                 height={54}
-                className="h-6 sm:h-8 md:h-9 lg:h-10 xl:h-11 2xl:h-12 object-contain cursor-pointer"
+                className="h-6 sm:h-8 md:h-9 lg:h-10 xl:h-11 2xl:h-12 w-auto object-contain cursor-pointer"
+                style={{ maxWidth: '180px' }}
               />
             </a>
           </div>
@@ -90,7 +91,7 @@ export const AmenidadesPage: React.FC = () => {
 
       {/* Sidebar */}
       <Sidebar
-        categories={AMENIDADES_CATEGORIES}
+        categories={CLUB_HOUSE_CATEGORIES}
         isOpen={isOpen}
         expandedCategory={expandedCategory}
         selectedModel={selectedModel?.id || null}
@@ -101,7 +102,7 @@ export const AmenidadesPage: React.FC = () => {
 
       {/* Main Content */}
       <div
-        className={`min-h-screen pt-12 transition-all duration-300 ease-in-out flex flex-col ${
+        className={`h-screen pt-12 transition-all duration-300 ease-in-out flex flex-col ${
           isOpen ? 'ml-[280px]' : 'ml-0'
         }`}
       >
@@ -120,10 +121,10 @@ export const AmenidadesPage: React.FC = () => {
           <ApartmentDisplay
             selectedModel={selectedModel}
             categoryName={getSelectedCategoryName()}
-            categories={AMENIDADES_CATEGORIES}
+            categories={CLUB_HOUSE_CATEGORIES}
             onSelectCategory={handleSelectCategory}
             showStats={false}
-            landingTitle="Amenidades del Club House"
+            landingTitle="Club House"
             landingSubtitle={null}
           />
         </div>

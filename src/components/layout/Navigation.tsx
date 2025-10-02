@@ -23,23 +23,22 @@ export const Navigation: React.FC = () => {
         </Button>
       </div>
       <div className="flex-1"></div>
-      <div className="flex items-center">
-        <a
-          href="https://www.equanime.co/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="transition-all hover:scale-105"
-          onClick={scrollToTop}
-        >
-          <Image
-            src="/equanime-logo-new.png"
-            alt="Equánime"
-            width={180}
-            height={54}
-            className="h-6 sm:h-8 md:h-9 lg:h-10 xl:h-11 2xl:h-12 object-contain cursor-pointer"
-          />
-        </a>
-      </div>
+      <a
+        href="https://www.equanime.co/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition-all hover:scale-105 flex-shrink-0"
+        onClick={scrollToTop}
+      >
+        <Image
+          src="/equanime-logo-new.png"
+          alt="Equánime"
+          width={180}
+          height={54}
+          className="h-6 sm:h-8 md:h-9 lg:h-10 xl:h-11 2xl:h-12 w-auto object-contain cursor-pointer"
+          style={{ maxWidth: '180px' }}
+        />
+      </a>
     </nav>
   );
 };
