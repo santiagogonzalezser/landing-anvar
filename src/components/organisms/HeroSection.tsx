@@ -1,7 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/Button';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -27,29 +25,10 @@ export const HeroSection: React.FC = () => {
             <p className="text-base sm:text-lg md:text-xl text-center lg:text-left leading-relaxed" style={{ color: '#8e8066', opacity: 0.9 }}>
               El nuevo ícono de Bogotá que marcará un antes y un después en el Parque de la 93. Una inversión única en el corazón de Chicó.
             </p>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start flex-wrap items-center">
-              <Button
-                href="/apartamentos"
-                className="text-sm sm:text-base font-semibold w-full sm:w-auto max-w-xs"
-                variant="primary"
-              >
-                Apartamentos
-              </Button>
-
-              <Button
-                href="/amenidades"
-                className="text-sm sm:text-base font-semibold w-full sm:w-auto max-w-xs"
-                variant="primary"
-              >
-                Club House
-              </Button>
-            </div>
           </div>
 
           {/* Right Column: 360° Virtual Tour with background image */}
-          <div className="relative w-full py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 md:px-12 lg:px-16 flex items-center justify-center overflow-hidden">
+          <div className="relative w-full py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 md:px-12 lg:pl-12 lg:pr-0 flex items-center justify-center overflow-hidden">
             {/* Background Image */}
             <Image
               src="/ARIA_FACHADA_WEB.jpg"
@@ -61,7 +40,7 @@ export const HeroSection: React.FC = () => {
             />
 
             {/* 360° Virtual Tour */}
-            <div className="relative z-10 w-full aspect-video overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl">
+            <div className="relative z-10 w-full aspect-video overflow-hidden rounded-xl sm:rounded-2xl lg:mr-12 shadow-2xl">
               <iframe
                 className="ku-embed w-full h-full"
                 frameBorder="0"

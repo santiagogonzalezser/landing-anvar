@@ -7,6 +7,8 @@ import { AnimatedBackground } from '@/components/ui/AnimatedBackground';
 import { HeroSection } from '@/components/organisms/HeroSection';
 import { ProjectStats } from '@/components/organisms/ProjectStats';
 import { ProjectDetailsSection } from '@/components/organisms/ProjectDetailsSection';
+import { ApartamentosSection } from '@/components/organisms/ApartamentosSection';
+import { ClubHouseSection } from '@/components/organisms/ClubHouseSection';
 import { AmenitiesSection } from '@/components/organisms/AmenitiesSection';
 import { ContactSection } from '@/components/organisms/ContactSection';
 import { useMousePosition } from '@/hooks/useMousePosition';
@@ -47,6 +49,12 @@ export const HomePage: React.FC = () => {
 
       {/* Project Details Section */}
       <ProjectDetailsSection />
+
+      {/* Apartamentos Section */}
+      <ApartamentosSection />
+
+      {/* Club House Section */}
+      <ClubHouseSection />
 
       {/* Amenities Section */}
       <AmenitiesSection />

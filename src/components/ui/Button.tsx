@@ -19,7 +19,7 @@ export const Button: React.FC<ButtonProps> = ({
   type = 'button',
   variant = 'primary',
 }) => {
-  const baseClasses = 'px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:scale-105 transition-all shadow-2xl';
+  const baseClasses = 'rounded-full font-semibold shadow-2xl';
 
   const variantStyles = {
     primary: {

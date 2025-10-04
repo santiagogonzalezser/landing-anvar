@@ -1,29 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run dev:*)",
-      "WebFetch(domain:mailchi.mp)",
-      "WebFetch(domain:www.minjusticia.gov.co)",
-      "WebFetch(domain:www.minambiente.gov.co)",
-      "Bash(npm install:*)",
-      "Read(//c/Users/santi/OneDrive/Imágenes/ÁNVAR/**)",
-      "Bash(pkill:*)",
-      "Bash(git init:*)",
-      "Bash(git add:*)",
-      "Bash(npx next:*)",
-      "Bash(powershell:*)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)",
-      "Bash(npm run start:*)",
-      "Bash(npx kill-port:*)",
-      "Bash(npm run build:*)",
-      "Bash(copy:*)",
       "Read(//c/Users/santi/OneDrive/Imágenes/Screenshots/**)",
-      "Bash(git checkout:*)",
-      "Bash(cp:*)",
-      "Bash(find:*)",
-      "Bash(rm:*)",
-      "WebSearch"
+      "Bash(git restore:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nrefactor: redesign landing page layout and improve UX\n\n- Resize section titles to match \"Exclusividad Redefinida\" sizing\n- Adjust Apartamentos and Club House sections: resize titles and rebalance column widths (1fr:2fr)\n- Shrink navigation button and increase banner height\n- Resize Equánime logo in navigation\n- Remove all hover effects across components for cleaner interactions\n- Reorganize hero section: remove action buttons, adjust 360° tour positioning\n- Scale down contact section to fit on screen (60-80% scale)\n- Remove project stats cards from standalone section\n- Delete unused amenidades and apartamentos page routes\n- Add new section components: ApartamentosSection, ClubHouseSection\n- Update button component to remove default padding\n- Clean up navigation padding and spacing\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []

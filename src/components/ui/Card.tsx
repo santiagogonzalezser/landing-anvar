@@ -16,7 +16,7 @@ export const Card: React.FC<CardProps> = ({
   hover = true,
 }) => {
   const baseClasses = 'backdrop-blur-sm border rounded-2xl shadow-lg';
-  const hoverClasses = hover ? 'hover:scale-105 transition-all' : '';
+  const hoverClasses = '';
 
   const variantStyles = {
     default: {

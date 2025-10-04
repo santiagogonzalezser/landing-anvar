@@ -7,16 +7,16 @@ import { scrollToTop } from '@/lib/utils';
 export const Navigation: React.FC = () => {
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 flex items-center px-4 sm:px-4 md:px-6 lg:px-8 xl:px-10 py-2 sm:py-3 md:py-3 lg:py-3 xl:py-3 2xl:py-4 backdrop-blur-sm border-b"
+      className="fixed top-0 left-0 right-0 z-50 flex items-center px-2 sm:px-3 md:px-4 py-2 sm:py-4 backdrop-blur-sm border-b"
       style={{
         backgroundColor: 'rgba(39, 49, 45, 0.95)',
         borderBottomColor: 'rgba(142, 128, 102, 0.2)'
       }}
     >
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-2">
         <Button
           href="#contacto"
-          className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl"
+          className="text-[10px] sm:text-xs md:text-xs lg:text-sm px-2 py-0.5 sm:px-3 sm:py-0.5"
           variant="primary"
         >
           Lanzamiento
@@ -27,7 +27,7 @@ export const Navigation: React.FC = () => {
         href="https://www.equanime.co/"
         target="_blank"
         rel="noopener noreferrer"
-        className="transition-all hover:scale-105 flex-shrink-0"
+        className="flex-shrink-0"
         onClick={scrollToTop}
       >
         <Image
@@ -35,8 +35,8 @@ export const Navigation: React.FC = () => {
           alt="Equánime"
           width={180}
           height={54}
-          className="h-6 sm:h-8 md:h-9 lg:h-10 xl:h-11 2xl:h-12 w-auto object-contain cursor-pointer"
-          style={{ maxWidth: '180px' }}
+          className="h-5 sm:h-6 md:h-7 lg:h-8 w-auto object-contain cursor-pointer"
+          style={{ maxWidth: '170px' }}
         />
       </a>
     </nav>

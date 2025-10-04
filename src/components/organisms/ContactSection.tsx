@@ -37,14 +37,15 @@ export const ContactSection: React.FC = () => {
 
   return (
     <>
-      <section id="contacto" className="relative z-10 py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12 lg:px-16" style={{ backgroundColor: '#8e8066' }}>
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 px-2" style={{ color: '#27312d' }}>
+      <section id="contacto" className="relative z-10 py-3 sm:py-5 md:py-7 lg:py-8 px-3 sm:px-5 md:px-7 lg:px-8" style={{ backgroundColor: '#8e8066' }}>
+        <div className="max-w-4xl mx-auto text-center scale-[0.6] sm:scale-[0.65] md:scale-[0.75] lg:scale-[0.8]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 px-2" style={{ color: '#27312d' }}>
             Accede al Lanzamiento
           </h2>
-          <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto px-4" style={{ color: '#27312d', opacity: 0.8 }}>
-            Sé parte de los primeros en conocer este exclusivo proyecto.
-            Regístrate ahora y obtén condiciones preferenciales.
+          <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 max-w-3xl mx-auto px-4" style={{ color: '#27312d', opacity: 0.8 }}>
+            Sé parte de los primeros en conocer este
+            exclusivo proyecto. Regístrate ahora y obtén
+            información.
           </p>
 
           <div className="backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 mb-6 sm:mb-8" style={{ backgroundColor: 'rgba(39, 49, 45, 0.2)' }}>
@@ -145,7 +146,7 @@ export const ContactSection: React.FC = () => {
               <Button
                 type="submit"
                 variant="secondary"
-                className="w-full text-sm sm:text-base md:text-lg font-bold"
+                className="w-full text-sm sm:text-base md:text-lg font-bold px-6 py-3 sm:px-8 sm:py-4"
               >
                 Solicitar Información Exclusiva
               </Button>

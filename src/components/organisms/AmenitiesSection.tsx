@@ -4,13 +4,13 @@ import { AMENITIES } from '@/lib/constants';
 
 export const AmenitiesSection: React.FC = () => {
   return (
-    <section id="amenidades" className="relative z-10 py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12 lg:px-16">
+    <section id="amenidades" className="relative z-10 py-8 sm:py-10 md:py-12 lg:py-14 px-4 sm:px-6 md:px-8 lg:px-12">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 px-2" style={{ color: '#8e8066' }}>
+        <div className="text-center mb-6 sm:mb-8 md:mb-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 px-2" style={{ color: '#8e8066' }}>
             Amenidades de Lujo
           </h2>
-          <p className="text-sm sm:text-base md:text-lg px-4" style={{ color: '#8e8066', opacity: 0.8 }}>
+          <p className="text-lg sm:text-xl md:text-2xl px-4 max-w-3xl mx-auto" style={{ color: '#8e8066', opacity: 0.8 }}>
             Disfruta de un estilo de vida único con las mejores amenidades de la ciudad
           </p>
         </div>
