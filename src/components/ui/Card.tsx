@@ -12,11 +12,9 @@ export const Card: React.FC<CardProps> = ({
   children,
   className = '',
   style = {},
-  variant = 'default',
-  hover = true,
+  variant = 'default'
 }) => {
   const baseClasses = 'backdrop-blur-sm border rounded-2xl shadow-lg';
-  const hoverClasses = '';
 
   const variantStyles = {
     default: {
@@ -43,7 +41,7 @@ export const Card: React.FC<CardProps> = ({
 
   return (
     <div
-      className={`${baseClasses} ${hoverClasses} ${className}`}
+      className={`${baseClasses} ${className}`}
       style={combinedStyle}
     >
       {children}

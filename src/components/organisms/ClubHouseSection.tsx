@@ -12,8 +12,8 @@ export const ClubHouseSection: React.FC = () => {
 
   // Collect all images from models in the current category
   const allImages = currentCategory.models.flatMap(model =>
-    model.images || [model.image]
-  ).filter(Boolean);
+    'images' in model ? model.images : [model.image]
+  ).filter(Boolean) as string[];
 
   return (
     <section id="club-house" className="relative z-10 py-4 sm:py-6 md:py-8 lg:py-10 px-4 sm:px-6 md:px-8 lg:px-12">
@@ -76,7 +76,7 @@ export const ClubHouseSection: React.FC = () => {
           </div>
 
           {/* Right Column: Image Carousel */}
-          <div className="h-[280px] sm:h-[320px] md:h-[350px] lg:h-[370px]">
+          <div>
             <ImageCarousel
               images={allImages}
               modelName={currentCategory.name}

@@ -5,12 +5,12 @@ import { Navigation } from '@/components/layout/Navigation';
 import { Footer } from '@/components/layout/Footer';
 import { AnimatedBackground } from '@/components/ui/AnimatedBackground';
 import { HeroSection } from '@/components/organisms/HeroSection';
-import { ProjectStats } from '@/components/organisms/ProjectStats';
 import { ProjectDetailsSection } from '@/components/organisms/ProjectDetailsSection';
 import { ApartamentosSection } from '@/components/organisms/ApartamentosSection';
 import { ClubHouseSection } from '@/components/organisms/ClubHouseSection';
 import { AmenitiesSection } from '@/components/organisms/AmenitiesSection';
 import { ContactSection } from '@/components/organisms/ContactSection';
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { useMousePosition } from '@/hooks/useMousePosition';
 import { useScrollY } from '@/hooks/useScrollY';
 import { theme } from '@/lib/theme';
@@ -26,11 +26,10 @@ export const HomePage: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen overflow-x-hidden max-w-full"
+      className="min-h-screen overflow-x-hidden max-w-full pt-12 sm:pt-16 md:pt-20"
       style={{
         backgroundColor: theme.colors.background,
         color: theme.colors.text.primary,
-        paddingTop: '60px',
         fontFamily: theme.fonts.primary
       }}
     >
@@ -64,6 +63,9 @@ export const HomePage: React.FC = () => {
 
       {/* Footer */}
       <Footer />
+
+      {/* WhatsApp Floating Button */}
+      <WhatsAppButton />
     </div>
   );
 };

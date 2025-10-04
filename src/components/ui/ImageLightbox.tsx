@@ -25,6 +25,18 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({
     setCurrentIndex(initialIndex);
   }, [initialIndex]);
 
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
@@ -45,27 +57,24 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({
     if (isOpen) {
       document.addEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'hidden';
+      // Hide navigation
+      const nav = document.querySelector('nav');
+      if (nav) (nav as HTMLElement).style.display = 'none';
     } else {
       document.body.style.overflow = 'unset';
+      // Show navigation
+      const nav = document.querySelector('nav');
+      if (nav) (nav as HTMLElement).style.display = '';
     }
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
+      // Restore navigation
+      const nav = document.querySelector('nav');
+      if (nav) (nav as HTMLElement).style.display = '';
     };
-  }, [isOpen]);
-
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 

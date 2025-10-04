@@ -47,7 +47,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
   if (images.length === 1) {
     return (
       <>
-        <div className={`h-full flex items-center ${className}`}>
+        <div className={`flex items-center ${className}`}>
           {/* Left spacer to match arrow space */}
           <div className="p-3 mr-4 flex-shrink-0 opacity-0 pointer-events-none">
             <div className="w-6 h-6"></div>
@@ -55,7 +55,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
           {/* Main image */}
           <div
-            className={`relative flex-1 cursor-pointer h-full flex items-center justify-center ${images[0].includes('FACHADA') ? 'bg-[#27312d] rounded-2xl' : 'overflow-hidden rounded-2xl'}`}
+            className="relative flex-1 cursor-pointer overflow-hidden rounded-2xl max-h-[280px] sm:max-h-[300px] md:max-h-[320px] lg:max-h-[350px] flex items-center justify-center bg-[#27312d]"
             onClick={openLightbox}
           >
             <Image
@@ -63,7 +63,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
               alt={`Apartamento ${modelName}`}
               width={1200}
               height={800}
-              className={`${images[0].includes('FACHADA') ? 'max-h-full w-auto rounded-2xl' : 'w-full h-full object-cover'} hover:opacity-95 transition-opacity`}
+              className="max-w-full max-h-full object-contain"
               quality={95}
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
@@ -89,9 +89,9 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
   return (
     <>
-      <div className={`h-full flex flex-col ${className}`}>
+      <div className={`flex flex-col ${className}`}>
         {/* Container with navigation arrows outside */}
-        <div className="flex items-center h-full min-h-0">
+        <div className="flex items-center">
           {/* Left arrow */}
           <button
             onClick={goToPrevious}
@@ -104,7 +104,8 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
           {/* Main image */}
           <div
-            className="relative flex-1 cursor-pointer h-full overflow-hidden rounded-2xl"
+            className="relative flex-1 cursor-pointer overflow-hidden rounded-2xl max-h-[280px] sm:max-h-[300px] md:max-h-[320px] lg:max-h-[350px] flex items-center justify-center"
+            style={{ backgroundColor: '#27312d' }}
             onClick={openLightbox}
           >
             <Image
@@ -112,7 +113,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
               alt={`Apartamento ${modelName} - Vista ${currentIndex + 1}`}
               width={1200}
               height={800}
-              className="w-full h-full object-cover hover:opacity-95 transition-opacity"
+              className="max-w-full max-h-full object-contain"
               quality={95}
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
