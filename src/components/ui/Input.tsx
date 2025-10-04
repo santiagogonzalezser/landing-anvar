@@ -41,8 +41,7 @@ export const Input: React.FC<InputProps> = ({
       id={id}
       placeholder={placeholder}
       required={required}
-      value={value}
-      onChange={onChange}
+      {...(value !== undefined && { value, onChange })}
       onBlur={onBlur}
       onFocus={onFocus}
       className={`px-4 py-3 sm:px-6 sm:py-4 rounded-lg sm:rounded-xl border focus:outline-none focus:ring-2 transition-all text-sm sm:text-base ${className}`}
