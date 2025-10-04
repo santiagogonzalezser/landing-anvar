@@ -3,10 +3,10 @@ import Image from 'next/image';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative z-10 min-h-screen flex items-center">
+    <section className="relative z-10">
       <div className="max-w-full mx-auto w-full">
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-screen lg:min-h-[calc(100vh-60px)]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-screen">
 
           {/* Left Column: Logo, Description, and Action Buttons */}
           <div className="flex flex-col justify-center space-y-6 py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 md:px-12 lg:px-16">
@@ -28,7 +28,7 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* Right Column: 360° Virtual Tour with background image */}
-          <div className="relative w-full py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 md:px-12 lg:pl-12 lg:pr-0 flex items-center justify-center overflow-hidden">
+          <div className="relative w-full px-4 sm:px-6 md:px-12 lg:pl-12 lg:pr-0 flex items-center justify-center overflow-hidden -mt-12 sm:-mt-16 md:-mt-20">
             {/* Background Image */}
             <Image
               src="/ARIA_FACHADA_WEB.jpg"
